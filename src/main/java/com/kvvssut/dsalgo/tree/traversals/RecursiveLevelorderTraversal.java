@@ -33,12 +33,9 @@ public class RecursiveLevelorderTraversal {
 	}
 
 	private static void printNodesAtLevel(BinaryTree root, int level) {
-		if (root == null) {
-			return;
-		}
-
 		if (level == 1) {
 			System.out.println(root.getData());
+			return;
 		} else {
 			printNodesAtLevel(root.getLeft(), level - 1);
 			printNodesAtLevel(root.getRight(), level - 1);
